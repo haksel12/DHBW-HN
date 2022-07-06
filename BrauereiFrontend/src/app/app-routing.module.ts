@@ -5,13 +5,25 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'biere',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
  
   {
     path: 'biere',
     loadChildren: () => import('./biere/biere.module').then( m => m.BierePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'brauerei',
+    loadChildren: () => import('./brauerei/brauerei.module').then( m => m.BrauereiPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
   },
 ];
 

@@ -1,9 +1,87 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>biere</ion-title>
+        <ion-item lines="none">
+            <ion-icon name="beer-outline"></ion-icon>
+            <ion-title>Brauerei Metzger</ion-title>
+        </ion-item>
+        <ion-tab-bar class="hide-sm">
+            <ion-tab-button href="../biere">
+                <ion-icon name="beer-outline"></ion-icon>
+                <ion-label>Unsere Biere</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button href="../brauerei">
+                <ion-icon name="business-outline"></ion-icon>
+                <ion-label>Unsere Brauerei</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button href="../logout">
+                <ion-icon name="log-out-outline"></ion-icon>
+                <ion-label>Logout</ion-label>
+            </ion-tab-button>
+        </ion-tab-bar>
     </ion-toolbar>
 </ion-header>
-
 <ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" size-lg="6" offset-lg="3">
+                <ion-item class="item item-trns nopadding" lines="none">
+                    <ion-icon size="large" name="beer-outline"></ion-icon>
+                    <ion-title>Unsere Biere</ion-title>
+                </ion-item>
 
+
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" size-lg="6" offset-lg="3">
+                <ion-list>
+                    <ion-item>
+                        <ion-avatar slot="start">
+                            <img src="https://www.beowein.de/WebRoot/Store8/Shops/Shop538/53BC/45D8/12CA/1E97/19B9/AC14/504C/BB0F/Pils_200_m.png">
+                        </ion-avatar>
+                        <ion-label>
+                            <h2>Pils</h2>
+                            <h3>Unser Bestes!</h3>
+                            <p>Jeden Tag und der Tag macht Spaß...</p>
+                        </ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-avatar slot="start">
+                            <img src="https://www.biershop-franken.de/media/catalog/product/cache/4d7dd3bb3871e092e0e0eb1d4d4e69a7/b/r/brauhaus_doebler_hefeweizen_bier_aus_franken_1.jpg">
+                        </ion-avatar>
+                        <ion-label>Hefeweizen</ion-label>
+
+                    </ion-item>
+                    <ion-item>
+                        <ion-avatar slot="start">
+                            <img src="https://cdn02.plentymarkets.com/q7p0kwea05gv/item/images/3722/full/20528-1.png">
+                        </ion-avatar>
+                        <ion-label>Kristallweizen</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-avatar slot="start">
+                            <img src="https://cdn02.plentymarkets.com/99cbvkn2wswt/item/images/1069/middle/Lemke-Craft-030-Berlin-Pale-Ale-33-cl-Bierflasche.jpg">
+                        </ion-avatar>
+                        <ion-label>Craft Beer</ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
+<ion-tab-bar class="show-sm">
+    <ion-tab-button href="../biere">
+        <ion-icon name="beer-outline"></ion-icon>
+        <ion-label>Biere</ion-label>
+    </ion-tab-button>
+    <ion-tab-button href="../brauerei">
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label>Unsere Brauerei</ion-label>
+    </ion-tab-button>
+    <ion-tab-button href="../logout">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Logout</ion-label>
+    </ion-tab-button>
+</ion-tab-bar>

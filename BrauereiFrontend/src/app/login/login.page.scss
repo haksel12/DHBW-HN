@@ -1,0 +1,14 @@
+@media (max-width: 992px) {
+    .hide-sm {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .show-sm {
+        display: none;
+    }
+    ion-tab-bar {
+        --background: #eee;
+    }
+}
