@@ -1,0 +1,7 @@
+{
+  "name": "BrauereiFrontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
