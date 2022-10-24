@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IBier } from '../interfaces/IBier';
+import { BiereService } from '../services/biere.service';
 
 @Component({
   selector: 'app-biere',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BierePage implements OnInit {
 
-  constructor() { }
+  public biere:IBier[];
+  constructor(private bierService: BiereService, private router:Router) { }
 
   ngOnInit() {
+    this.biere = [];
+    this.getBiere();
+    console.log(this.biere);
   }
 
+  getBiere() {
+    this.bierService.getBiere().subscribe((res) => {
+      this.biere = res;
+    });
+  }
 }

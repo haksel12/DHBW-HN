@@ -36,6 +36,15 @@
         </ion-row>
         <ion-row>
             <ion-col size="12" size-lg="6" offset-lg="3">
+                <ion-list *ngFor="let bier of biere">
+                    <ion-item>
+                        <ion-label>
+                            {{bier.name}}
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+
+
                 <ion-list>
                     <ion-item>
                         <ion-avatar slot="start">

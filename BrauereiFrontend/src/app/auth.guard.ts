@@ -20,6 +20,7 @@ export class AuthGuard implements CanActivate {
           resolve(false);
         }else{
           localStorage.setItem('brauerei_current_user', JSON.stringify(user));
+          console.log(user);
           user.getIdToken().then(token => {
             localStorage.setItem('brauerei_current_token', token);
           })

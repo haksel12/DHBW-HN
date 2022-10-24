@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
 
@@ -11,7 +12,8 @@ const routes: Routes = [
  
   {
     path: 'biere',
-    loadChildren: () => import('./biere/biere.module').then( m => m.BierePageModule)
+    loadChildren: () => import('./biere/biere.module').then( m => m.BierePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
